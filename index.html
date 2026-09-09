@@ -3,157 +3,419 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de privacidad — Calendario</title>
+<title>CalendarIA — Política de privacidad y descargo de responsabilidad</title>
+<meta name="description" content="Política de privacidad y limitación de responsabilidad de CalendarIA, la app de calendario laboral con inteligencia artificial.">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#6A1B9A">
 <style>
   :root {
     color-scheme: light dark;
     --bg: #F7F4EF;
     --surface: #FFFFFF;
+    --surface-soft: #FAF7F2;
     --text: #1B2430;
     --text-soft: #4A5568;
-    --accent: #1B3A5C;
-    --border: #E2DED4;
+    --accent: #7B1FA2;
+    --border: #E4DFD6;
+    --aviso-bg: #FFF4E5;
+    --aviso-borde: #E8A33D;
+    --aviso-texto: #6B4310;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #14181F;
       --surface: #1C222C;
+      --surface-soft: #232A36;
       --text: #ECEDEE;
-      --text-soft: #A6ADBB;
-      --accent: #6FA8DC;
-      --border: #2A3140;
+      --text-soft: #AAB2C0;
+      --accent: #D68BEA;
+      --border: #2E3542;
+      --aviso-bg: #2E2418;
+      --aviso-borde: #B37A2A;
+      --aviso-texto: #F0D4A8;
     }
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    padding: 2rem 1rem 4rem;
+    padding: 0 1rem 4rem;
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+  .cabecera {
+    background: linear-gradient(135deg, #6A1B9A 0%, #AD1457 55%, #EC407A 100%);
+    color: #FFFFFF;
+    margin: 0 -1rem 2rem;
+    padding: 2.5rem 1rem 2.25rem;
+    text-align: center;
+  }
+  .cabecera img {
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto 0.9rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  .cabecera h1 {
+    margin: 0 0 0.35rem;
+    font-size: 1.75rem;
+    letter-spacing: -0.02em;
+  }
+  .cabecera p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1rem;
   }
   main {
-    max-width: 720px;
+    max-width: 760px;
     margin: 0 auto;
+  }
+  section, .indice {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem 1.75rem;
-  }
-  h1 {
-    font-size: 1.6rem;
-    margin-top: 0;
-    color: var(--accent);
+    border-radius: 14px;
+    padding: 1.5rem 1.5rem 1.6rem;
+    margin-bottom: 1.1rem;
   }
   h2 {
-    font-size: 1.15rem;
-    margin-top: 2rem;
+    font-size: 1.2rem;
+    margin: 0 0 0.75rem;
     color: var(--accent);
+    scroll-margin-top: 1rem;
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 1.4rem 0 0.4rem;
+    color: var(--text);
   }
   p, li { color: var(--text-soft); }
+  p { margin: 0 0 0.9rem; }
+  p:last-child, ul:last-child { margin-bottom: 0; }
+  strong { color: var(--text); }
+  ul { padding-left: 1.25rem; margin: 0 0 0.9rem; }
+  li { margin-bottom: 0.35rem; }
+  a { color: var(--accent); }
+  code {
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0.1em 0.4em;
+    font-size: 0.9em;
+  }
   .fecha {
+    text-align: center;
     font-size: 0.9rem;
     color: var(--text-soft);
-    margin-bottom: 2rem;
+    margin: 0 0 1.6rem;
   }
-  a { color: var(--accent); }
-  ul { padding-left: 1.3rem; }
+  .indice ol {
+    margin: 0;
+    padding-left: 1.3rem;
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+  .indice li { break-inside: avoid; }
+  .indice h2 { margin-bottom: 0.6rem; }
+  .destacado {
+    background: var(--aviso-bg);
+    border: 1px solid var(--aviso-borde);
+    border-left-width: 5px;
+    border-radius: 10px;
+    padding: 1rem 1.15rem;
+    margin: 1.1rem 0;
+  }
+  .destacado p { color: var(--aviso-texto); }
+  .destacado p:last-child { margin-bottom: 0; }
+  .destacado strong { color: var(--aviso-texto); }
   .contacto {
-    background: var(--bg);
+    background: var(--surface-soft);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 1rem 1.25rem;
-    margin-top: 0.5rem;
+  }
+  footer {
+    max-width: 760px;
+    margin: 2rem auto 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+  }
+  @media (max-width: 560px) {
+    .indice ol { columns: 1; }
+    .cabecera h1 { font-size: 1.45rem; }
+    section, .indice { padding: 1.25rem 1.15rem; }
   }
 </style>
 </head>
 <body>
+
+<div class="cabecera">
+  <img src="icon.png" alt="Logotipo de CalendarIA">
+  <h1>CalendarIA</h1>
+  <p>Política de privacidad y descargo de responsabilidad</p>
+</div>
+
 <main>
-  <h1>Política de privacidad de Calendario</h1>
-  <p class="fecha">Última actualización: 18 de julio de 2026</p>
 
-  <p>
-    Esta política explica qué datos recoge la aplicación <strong>Calendario</strong>
-    (identificador de paquete <code>com.avndev.calendaria</code>), para qué se usan
-    y qué control tienes sobre ellos.
-  </p>
+  <p class="fecha">Última actualización: 9 de septiembre de 2026</p>
 
-  <h2>Quién trata los datos</h2>
-  <p>
-    La app la desarrolla y mantiene una persona física, no una empresa.
-    Puedes contactar por email en la dirección indicada al final de esta página
-    para cualquier consulta sobre tus datos.
-  </p>
-
-  <h2>Qué datos recoge la app</h2>
-  <p>La app funciona sin necesidad de cuenta. Si decides iniciar sesión con Google, se recogen:</p>
-  <ul>
-    <li><strong>Datos de tu cuenta de Google:</strong> nombre, email e identificador de cuenta, proporcionados por el propio inicio de sesión de Google. No se accede a nada más de tu cuenta de Google.</li>
-    <li><strong>Datos del calendario:</strong> los turnos, horarios, vacaciones, festivos y ajustes (horas contratadas, comunidad autónoma, tema visual, etc.) que introduces dentro de la app.</li>
-  </ul>
-  <p>
-    Sin iniciar sesión, estos datos se guardan únicamente en tu dispositivo. Si inicias sesión,
-    se guardan también en la nube (Firebase, infraestructura de Google Cloud) para poder
-    sincronizarlos entre tus dispositivos y no perderlos si cambias de móvil.
-  </p>
-
-  <h2>Qué NO recoge la app</h2>
-  <ul>
-    <li>No hay publicidad ni SDKs de terceros con fines publicitarios.</li>
-    <li>No hay herramientas de analítica ni seguimiento de comportamiento.</li>
-    <li>No se recogen datos de salud, financieros ni de ubicación.</li>
-    <li>Tus datos no se venden ni se ceden a terceros con fines comerciales.</li>
-  </ul>
-
-  <h2>Función "Compartir calendario"</h2>
-  <p>
-    Si activas voluntariamente esta función, se crea una copia de solo lectura de tus
-    días marcados (sin tus ajustes personales) visible únicamente por las cuentas de
-    Google cuyo email hayas indicado tú mismo. Puedes revocar el acceso en cualquier
-    momento retirando ese email de la lista; el acceso se corta al instante.
-  </p>
-
-  <h2>Función Premium</h2>
-  <p>
-    La versión Premium se gestiona a través de Google Play. El estado de la suscripción
-    se verifica de forma segura y no implica compartir datos adicionales más allá de los
-    ya descritos en esta política.
-  </p>
-
-  <h2>Dónde se almacenan los datos</h2>
-  <p>
-    Los datos que se sincronizan en la nube se almacenan en Firebase (Google Cloud),
-    con las medidas de seguridad estándar de esa plataforma (cifrado en tránsito y en reposo,
-    acceso restringido por reglas de seguridad a tu propia cuenta).
-  </p>
-
-  <h2>Conservación y borrado</h2>
-  <p>
-    Tus datos se conservan mientras uses la app o mantengas la cuenta activa. Puedes borrar
-    tus datos de la nube desde la propia app (borrado de calendario) o solicitar el borrado
-    completo de tu cuenta y todos los datos asociados escribiendo al email de contacto.
-  </p>
-
-  <h2>Menores de edad</h2>
-  <p>
-    La app no está dirigida a menores de 14 años y no recoge de forma consciente datos
-    de menores de esa edad.
-  </p>
-
-  <h2>Cambios en esta política</h2>
-  <p>
-    Si esta política cambia de forma relevante, se actualizará la fecha indicada arriba.
-    El uso continuado de la app tras un cambio implica la aceptación de la nueva versión.
-  </p>
-
-  <h2>Contacto</h2>
-  <div class="contacto">
-    <p style="margin:0">
-      Para cualquier duda sobre esta política o tus datos, escribe a:<br>
-      <a href="mailto:espangelisimo@gmail.com">espangelisimo@gmail.com</a>
-    </p>
+  <div class="indice">
+    <h2>Contenido</h2>
+    <ol>
+      <li><a href="#quien">Quién trata los datos</a></li>
+      <li><a href="#recoge">Qué datos recoge la app</a></li>
+      <li><a href="#no-recoge">Qué NO recoge la app</a></li>
+      <li><a href="#ia">Uso de inteligencia artificial</a></li>
+      <li><a href="#compartir">Función «Compartir calendario»</a></li>
+      <li><a href="#premium">Función Premium</a></li>
+      <li><a href="#almacenamiento">Dónde se almacenan los datos</a></li>
+      <li><a href="#borrado">Conservación y borrado</a></li>
+      <li><a href="#menores">Menores de edad</a></li>
+      <li><a href="#descargo"><strong>Descargo de responsabilidad</strong></a></li>
+      <li><a href="#cambios">Cambios en esta política</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
   </div>
+
+  <section>
+    <p>
+      Esta página explica qué datos recoge la aplicación <strong>CalendarIA</strong>
+      (identificador de paquete <code>com.devavn.calendaria</code>), para qué se usan,
+      qué control tienes sobre ellos y —igual de importante— <strong>cuáles son los
+      límites de lo que la app puede garantizarte</strong>.
+    </p>
+    <p>
+      Está escrita para que se entienda. Si algo no queda claro, escribe al correo
+      del final y se te contesta.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="quien">1. Quién trata los datos</h2>
+    <p>
+      La app la desarrolla y mantiene <strong>una persona física</strong>, no una empresa.
+      Puedes contactar por email en la dirección indicada al final de esta página
+      para cualquier consulta sobre tus datos o para ejercer tus derechos de acceso,
+      rectificación, supresión, oposición, limitación y portabilidad.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="recoge">2. Qué datos recoge la app</h2>
+    <p>La app funciona sin necesidad de cuenta. Si decides iniciar sesión con Google, se recogen:</p>
+    <ul>
+      <li><strong>Datos de tu cuenta de Google:</strong> nombre, email e identificador de cuenta, proporcionados por el propio inicio de sesión de Google. No se accede a nada más de tu cuenta de Google.</li>
+      <li><strong>Datos del calendario:</strong> los turnos, horarios, vacaciones, festivos y ajustes (horas contratadas, comunidad autónoma, municipio de trabajo, tema visual, etc.) que introduces dentro de la app.</li>
+      <li><strong>Informes de errores:</strong> si la app falla, se envía un informe técnico (Firebase Crashlytics) con el tipo de error y el modelo de dispositivo, para poder arreglarlo. No incluye tus horarios.</li>
+    </ul>
+    <p>
+      Sin iniciar sesión, estos datos se guardan únicamente en tu dispositivo. Si inicias sesión,
+      se guardan también en la nube (Firebase, infraestructura de Google Cloud) para poder
+      sincronizarlos entre tus dispositivos y no perderlos si cambias de móvil.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="no-recoge">3. Qué NO recoge la app</h2>
+    <ul>
+      <li>No hay publicidad ni SDKs de terceros con fines publicitarios.</li>
+      <li>No hay herramientas de analítica ni seguimiento de comportamiento.</li>
+      <li>No se recogen datos de salud, financieros ni de ubicación.</li>
+      <li>No se accede a tu galería de fotos: solo a la imagen concreta que tú eliges para escanear.</li>
+      <li>Tus datos no se venden ni se ceden a terceros con fines comerciales.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="ia">4. Uso de inteligencia artificial</h2>
+    <p>
+      Dos funciones de CalendarIA usan inteligencia artificial: el <strong>escáner de
+      horarios</strong>, que lee la foto de tu cuadrante, y la <strong>consulta de convenio</strong>,
+      que busca información sobre tu convenio colectivo.
+    </p>
+    <h3>Qué se envía</h3>
+    <ul>
+      <li>Al escanear, <strong>la imagen que tú eliges</strong> se envía al modelo Gemini de Google para que extraiga los horarios. Si el cuadrante es colectivo y has indicado tu nombre para filtrarlo, ese nombre también viaja en la petición.</li>
+      <li>Al consultar el convenio, se envían los datos de búsqueda que tú introduces (sector, provincia y similares).</li>
+    </ul>
+    <h3>Qué se guarda y qué no</h3>
+    <ul>
+      <li><strong>La foto no se guarda.</strong> Se procesa y se descarta: no se almacena en el servidor de la app ni en ninguna copia de seguridad.</li>
+      <li><strong>Sí se guarda el resultado</strong> (los horarios extraídos), para que puedas recuperarlo si la app se cierra a mitad del proceso o si quieres volver a aplicarlo sin gastar cupo otra vez. Se conservan como máximo los <strong>10 escaneos más recientes</strong>, y solo tu propia cuenta puede leerlos.</li>
+      <li>El procesamiento lo realiza Google a través de su API de pago de Gemini, sujeto a las condiciones de dicho servicio.</li>
+    </ul>
+    <p>
+      Las limitaciones de esta tecnología —y lo que se espera de ti como usuario— están
+      explicadas en el <a href="#descargo">descargo de responsabilidad</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="compartir">5. Función «Compartir calendario»</h2>
+    <p>
+      Si activas voluntariamente esta función, se crea una copia de solo lectura de tus
+      días marcados (sin tus ajustes personales) visible únicamente por las cuentas de
+      Google cuyo email hayas indicado tú mismo. Puedes revocar el acceso en cualquier
+      momento retirando ese email de la lista; el acceso se corta al instante.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="premium">6. Función Premium</h2>
+    <p>
+      La versión Premium se gestiona a través de Google Play. El estado de la suscripción
+      se verifica de forma segura contra los servidores de Google y no implica compartir
+      datos adicionales más allá de los ya descritos en esta política. CalendarIA
+      <strong>no ve ni almacena tus datos de pago</strong>: los gestiona Google Play en su totalidad.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="almacenamiento">7. Dónde se almacenan los datos</h2>
+    <p>
+      Los datos que se sincronizan en la nube se almacenan en Firebase (Google Cloud),
+      con las medidas de seguridad estándar de esa plataforma: cifrado en tránsito y en reposo,
+      y acceso restringido por reglas de seguridad de forma que solo tu propia cuenta
+      puede leer y escribir tus datos.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="borrado">8. Conservación y borrado</h2>
+    <p>
+      Tus datos se conservan mientras uses la app o mantengas la cuenta activa. Puedes borrar
+      tus datos de la nube desde la propia app (borrado de calendario) o solicitar el borrado
+      completo de tu cuenta y todos los datos asociados escribiendo al email de contacto.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="menores">9. Menores de edad</h2>
+    <p>
+      La app no está dirigida a menores de 14 años y no recoge de forma consciente datos
+      de menores de esa edad.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="descargo">10. Descargo de responsabilidad</h2>
+
+    <div class="destacado">
+      <p>
+        <strong>CalendarIA es una herramienta de apoyo personal para organizar tu calendario
+        laboral.</strong> No es un documento oficial, no es un registro legal de jornada y no
+        constituye asesoramiento laboral ni jurídico. La información que muestra
+        <strong>debes contrastarla siempre</strong> con tu cuadrante oficial, tu convenio
+        colectivo y tu empresa antes de tomar cualquier decisión.
+      </p>
+    </div>
+
+    <h3>10.1. La lectura de horarios con IA puede equivocarse</h3>
+    <p>
+      El escáner funciona con modelos de inteligencia artificial generativa. Esta tecnología,
+      por su propia naturaleza, <strong>puede cometer errores</strong>: interpretar mal una fila
+      o una columna, confundir a dos trabajadores de un cuadrante colectivo, asignar un turno a
+      un día que no le corresponde, leer mal una hora, saltarse días o incluso
+      <strong>generar información que no aparece en la imagen</strong> (lo que se conoce como
+      «alucinación»). No se trata de un fallo puntual que pueda eliminarse por completo: es una
+      <strong>limitación conocida e inherente</strong> a esta tecnología, y la calidad de la foto
+      —enfoque, iluminación, giro, arrugas, sombras— influye directamente en el resultado.
+    </p>
+    <p>
+      Por eso la app <strong>nunca aplica un escaneo a tu calendario sin enseñártelo antes</strong>.
+      La pantalla de revisión existe exactamente para esto. <strong>Comprobar día a día el
+      resultado antes de aplicarlo es responsabilidad tuya.</strong>
+    </p>
+
+    <h3>10.2. Los festivos automáticos pueden estar mal</h3>
+    <p>
+      Los festivos nacionales, autonómicos y locales se obtienen de fuentes públicas (BOE y
+      boletines oficiales autonómicos y provinciales) mediante procesos automáticos. Pueden
+      llegar <strong>incompletos, con retraso, con erratas de origen</strong> o asignados a una
+      comunidad o municipio que no es el tuyo. Los festivos locales, en particular, dependen de
+      acuerdos municipales que no siempre se publican de forma reutilizable, y los festivos de
+      apertura comercial varían según la comunidad y el año.
+    </p>
+    <p>
+      <strong>El calendario laboral válido es el que publique tu boletín oficial y el que fije tu
+      empresa o tu convenio, no el que pinte esta app.</strong> Si ves un festivo que no
+      corresponde, puedes corregirlo manualmente en cualquier momento.
+    </p>
+
+    <h3>10.3. Los cálculos de horas son orientativos</h3>
+    <p>
+      El cómputo de horas trabajadas, excedentes semanales, saldos anuales, vacaciones y
+      cualquier otro contador se calcula a partir de lo que tú introduces o de lo que ha leído
+      la IA. <strong>Si el dato de partida es incorrecto, el resultado también lo será.</strong>
+    </p>
+    <p>
+      Estos cálculos <strong>no sirven como prueba</strong> ante tu empresa, ante la Inspección
+      de Trabajo ni ante un tribunal, y <strong>no sustituyen al registro horario</strong> que tu
+      empresa está legalmente obligada a llevar.
+    </p>
+
+    <h3>10.4. La consulta de convenio es orientativa</h3>
+    <p>
+      La búsqueda de convenio devuelve un resumen generado por inteligencia artificial a partir
+      de textos públicos. Puede citar mal, quedarse desactualizada, no encontrar tu convenio
+      concreto o confundirlo con otro parecido. <strong>No es asesoramiento jurídico.</strong>
+      Antes de tomar cualquier decisión basada en ella, consulta el texto oficial de tu convenio
+      o a un profesional cualificado.
+    </p>
+
+    <h3>10.5. Qué se te pide</h3>
+    <p>
+      Antes de usar los datos de CalendarIA para algo que tenga consecuencias —reclamar horas,
+      pedir vacaciones, cuadrar un turno, discutir un festivo o firmar cualquier cosa—
+      <strong>contrasta siempre la información</strong> con tu cuadrante oficial, tu convenio o
+      tu empresa.
+    </p>
+
+    <h3>10.6. Limitación de responsabilidad</h3>
+    <p>
+      La app se ofrece «tal cual», sin garantía de que esté libre de errores ni de estar
+      disponible de forma ininterrumpida. En la máxima medida permitida por la legislación
+      aplicable, el desarrollador <strong>no se hace responsable de los daños o perjuicios
+      derivados de decisiones tomadas a partir de información generada, leída o calculada por la
+      app</strong>, ni de la pérdida de datos, ni de la indisponibilidad temporal del servicio o
+      de los servicios de terceros de los que depende.
+    </p>
+    <p>
+      Esta limitación <strong>no afecta a los derechos que la normativa de consumo te reconoce
+      como usuario</strong>, que se mantienen intactos, ni excluye ninguna responsabilidad que
+      por ley no pueda excluirse.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="cambios">11. Cambios en esta política</h2>
+    <p>
+      Si esta política cambia de forma relevante, se actualizará la fecha indicada arriba.
+      El uso continuado de la app tras un cambio implica la aceptación de la nueva versión.
+    </p>
+  </section>
+
+  <section>
+    <h2 id="contacto">12. Contacto</h2>
+    <div class="contacto">
+      <p style="margin:0">
+        Para cualquier duda sobre esta política, sobre el descargo de responsabilidad o sobre
+        tus datos, escribe a:<br>
+        <a href="mailto:espangelisimo@gmail.com">espangelisimo@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
 </main>
+
+<footer>
+  CalendarIA · Calendario laboral con inteligencia artificial
+</footer>
+
 </body>
 </html>
